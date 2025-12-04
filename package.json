@@ -1,0 +1,25 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fathimaka123/react.git"
+  },
+  "author": "fathimaka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fathimaka123/react/issues"
+  },
+  "homepage": "https://github.com/fathimaka123/react#readme",
+  "dependencies": {
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  }
+}
