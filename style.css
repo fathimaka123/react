@@ -1,3 +1,47 @@
-#heading {
-    color: red;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border:1px solid black;
+  background: #fff;
+}
+
+.logo {
+  width: 80px;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.nav li:hover {
+  color: #000;
+}
+
+.restau-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.res-container {
+    width:300px;
+    border:1px solid black;
+    padding: 5px;
+}
+
+.food-img{
+    width: 290px;
 }

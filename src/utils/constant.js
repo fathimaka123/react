@@ -1,0 +1,2 @@
+export const LOGO_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGHvW6Om-8r2Djbq-a-wrIKKgdfFeVi_uJhw&s"
+export const IMG_BASE_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366/"
