@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ResCard from "../ResCard";
+import ResCard from "./ResCard";
 const Body = ({resLi}) => {
 const [listOfRestaurants,setListOfRestaurants] = useState(resLi)
 
