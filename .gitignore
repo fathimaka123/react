@@ -2,3 +2,5 @@
 /node_modules
 /dist
 /copy.js
+/package-lock.json
+/package.json

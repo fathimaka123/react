@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ResCard from "./ResCard";
 import { JSON_API } from "../utils/constants";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -12,8 +13,11 @@ const Body = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+
+
   const fetchData = async () => {
-    const data = await fetch(JSON_API);
+    const data = await fetch("https://dummyjson.com/products");
     const json = await data.json();
     console.log(json);
     setListOfRestaurants(
@@ -24,6 +28,7 @@ const Body = () => {
     );
   };
 
+
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
@@ -33,7 +38,7 @@ const Body = () => {
           <button
             className="filter-btn"
             onClick={() => {
-              const filtered = listOfRestaurants.filter((res) => res.products.Rating > 4.5);
+              const filtered = listOfRestaurants.filter((res) => res.rating > 4.5);
               console.log(filtered)
               setFilteredList(filtered);
             }}
@@ -51,19 +56,21 @@ const Body = () => {
               }}
             />{""}
             <button onClick={()=>{
-             const filtered= listOfRestaurants.filter((res) => res.products.title.toLowerCase().includes(searchText.toLocaleLowerCase()))
+             const filtered= listOfRestaurants.filter((res) => res.title.toLowerCase().includes(searchText.toLocaleLowerCase()))
              setFilteredList(filtered)
             }} >search</button>
           </div>
         </div>
         <div className="restau-cards">
-          {filteredList?.map((products) => (
-            <ResCard key={products.id} products={products} />
+          {filteredList.map((products) => (
+            <Link key={products.id} to={`/products/${products.id}`}>
+              <ResCard products={products} />
+            </Link>
           ))}
         </div>
       </div>
-    </div>
+      </div>
+    
   );
 };
-
 export default Body

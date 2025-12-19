@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev":"parcel index.html",
+    "dev": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
   },
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/fathimaka123/react#readme",
   "dependencies": {
     "react": "^19.2.1",
-    "react-dom": "^19.2.1"
+    "react-dom": "^19.2.1",
+    "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
     "parcel": "^2.16.1"

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const[auth,setAuth] = useState("Login")
@@ -15,9 +16,9 @@ const Header = () => {
       />
       <div className="nav-items">
         <ul className="nav">
-          <li>Home</li>
-          <li>About</li>
-          <li>Cart</li>
+        <Link to={"/"}>  <li>Home</li></Link>
+          <Link to={"/about"}>  <li>About</li></Link>
+          <Link to={"/contact"}>  <li>Contact</li></Link>
           <button className="btn-login" onClick={()=>{auth === "Login" ? setAuth("Log out"): setAuth("Login")}}>{auth}</button>
         </ul>
       </div>
