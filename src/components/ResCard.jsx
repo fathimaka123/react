@@ -10,7 +10,7 @@ const ResCard = ({products}) => {
       <h4>{products.title}</h4>
       <h4>{products.category} </h4>
       <h4>{products.price}</h4>
-      <h5>{products.Rating} Rating</h5>
+      <h5>{products.rating} Rating</h5>
       
     </div>
   );

@@ -16,9 +16,9 @@ const Header = () => {
       />
       <div className="nav-items">
         <ul className="nav">
-        <Link to={"/"}>  <li>Home</li></Link>
-          <Link to={"/about"}>  <li>About</li></Link>
-          <Link to={"/contact"}>  <li>Contact</li></Link>
+        <Link className="link-data" to={"/"}>  <li>Home</li></Link>
+          <Link className="link-data" to={"/about"}>  <li>About</li></Link>
+          <Link className="link-data" to={"/contact"}>  <li>Contact</li></Link>
           <button className="btn-login" onClick={()=>{auth === "Login" ? setAuth("Log out"): setAuth("Login")}}>{auth}</button>
         </ul>
       </div>

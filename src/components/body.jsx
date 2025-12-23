@@ -55,7 +55,7 @@ const Body = () => {
                 
               }}
             />{""}
-            <button onClick={()=>{
+            <button  onClick={()=>{
              const filtered= listOfRestaurants.filter((res) => res.title.toLowerCase().includes(searchText.toLocaleLowerCase()))
              setFilteredList(filtered)
             }} >search</button>
@@ -63,7 +63,7 @@ const Body = () => {
         </div>
         <div className="restau-cards">
           {filteredList.map((products) => (
-            <Link key={products.id} to={`/products/${products.id}`}>
+            <Link className="link-data" key={products.id} to={`/products/${products.id}`}>
               <ResCard products={products} />
             </Link>
           ))}
