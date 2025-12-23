@@ -6,7 +6,6 @@ const ResCard = ({products}) => {
   return (
     <div className="res-container">
       <img className="food-img" src={products.thumbnail} />
-      {/* <h2>{products.id}</h2> */}
       <h4>{products.title}</h4>
       <h4>{products.category} </h4>
       <h4>{products.price}</h4>
